@@ -3,6 +3,7 @@
 This technical test is intended to test your ability to structure code, process data, and present it.
 
 We are looking for:
+
 1. Well structured, testable, commented code
 2. Accompanying automated tests
 3. Use of the correct tools for specific tasks
