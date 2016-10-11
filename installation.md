@@ -14,49 +14,49 @@ I hope I haven't forgotten any steps, no doubt I've missed one or two. But here 
 
 1. Clone this repository
 
-```
-git clone https://github.com/mstnorris/CityAM cityam
-```
+    ```
+    git clone https://github.com/mstnorris/CityAM cityam
+    ```
 
 2. Install dependencies
 
-```
-composer install
-npm install
-```
+    ```
+    composer install
+    npm install
+    ```
 
 3. Compile Assets
 
-```
-gulp
-```
+    ```
+    gulp
+    ```
 
 4. Create an environment file and edit your database setup
 
-```
-cp .env.example .env
-```
-
-```
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=cityam
-DB_USERNAME=username
-DB_PASSWORD=password
-```
+    ```
+    cp .env.example .env
+    ```
+    
+    ```
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=cityam
+    DB_USERNAME=username
+    DB_PASSWORD=password
+    ```
 
 5. Generate Application Key
 
-```
-php artisan key:generate
-```
+    ```
+    php artisan key:generate
+    ```
 
 6. Run the database migrations
 
-```
-php artisan migrate
-```
+    ```
+    php artisan migrate
+    ```
 
 7. Set up the scheduler to run cron jobs
 
