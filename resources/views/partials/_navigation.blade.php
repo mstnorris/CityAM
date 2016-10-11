@@ -34,6 +34,10 @@
                            class="dropdown-item">
                             Report
                         </a>
+                        <a href="/sql/city_am_sql_dump.sql"
+                           class="dropdown-item">
+                            Download SQL Dump
+                        </a>
                     </div>
                 </div>
             </div>
