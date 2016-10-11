@@ -1,9 +1,66 @@
-
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
-// Variables
 @import "variables";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
 
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  padding: 60px 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+img {
+  border: 1px solid $card-border-color;
+  border-radius: $card-border-radius;
+  width: 116%;
+  margin-left: -8%;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.fancy {
+  line-height: 0.5;
+  text-align: center;
+}
+
+.fancy span {
+  display: inline-block;
+  position: relative;
+}
+
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  border-bottom: 1px solid #e3e3e3;
+  top: 0;
+  width: 60%;
+}
+
+.fancy span:before {
+  right: 100%;
+  margin-right: 8px;
+}
+
+.fancy span:after {
+  left: 100%;
+  margin-left: 8px;
+}

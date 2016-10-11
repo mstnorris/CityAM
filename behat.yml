@@ -1,0 +1,12 @@
+default:
+    autoload:
+        '': %paths.base%/tests
+    suites:
+        default:
+            paths:    [ %paths.base%/tests ]
+            contexts: [ FeatureContext ]
+    extensions:
+        Laracasts\Behat: ~
+        Behat\MinkExtension:
+            default_session: laravel
+            laravel: ~

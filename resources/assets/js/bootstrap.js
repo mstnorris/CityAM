@@ -8,7 +8,8 @@ window._ = require('lodash');
  */
 
 window.$ = window.jQuery = require('jquery');
-require('bootstrap-sass');
+global.Tether = require('tether');
+require('bootstrap');
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces

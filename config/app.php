@@ -178,6 +178,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+        willvincent\Feeds\FeedsServiceProvider::class,
+        HieuLe\Active\ActiveServiceProvider::class,
+
     ],
 
     /*
@@ -225,6 +230,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'Feeds'    => willvincent\Feeds\Facades\FeedsFacade::class,
+        'Active' => HieuLe\Active\Facades\Active::class,
 
     ],
 

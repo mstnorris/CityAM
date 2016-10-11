@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+Route::get('articles', function () {
+    $articles = App\Article::latest('published_at')->paginate(5);
+
+    return response()->json(['articles' => $articles]);
+});
