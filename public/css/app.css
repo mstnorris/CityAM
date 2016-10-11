@@ -4754,6 +4754,9 @@ body {
   background-color: #eceff1;
   color: #b0bec5; }
 
+a.card, a.card:hover {
+  text-decoration: none; }
+
 img {
   border: 1px solid #CFD8DC;
   border-radius: 0.25rem;

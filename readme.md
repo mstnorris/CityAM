@@ -6,6 +6,7 @@
 2. [readme](readme.md)
 3. [Installation](installation.md)
 4. [Instructions](instructions.md)
+5. [Report](report.md)
 
 ## Overview
 

@@ -25,6 +25,10 @@ body {
   color: #b0bec5; // 90A4AE
 }
 
+a.card, a.card:hover {
+  text-decoration: none;
+}
+
 img {
   border: 1px solid $card-border-color;
   border-radius: $card-border-radius;

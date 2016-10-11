@@ -6,8 +6,11 @@
 2. [readme](readme.md)
 3. [Installation](installation.md)
 4. [Instructions](instructions.md)
+5. [Report](report.md)
 
 ## Installation
+
+I hope I haven't forgotten any steps, no doubt I've missed one or two. But here goes...
 
 1. Clone this repository
 
@@ -19,9 +22,16 @@ git clone https://github.com/mstnorris/CityAM cityam
 
 ```
 composer install
+npm install
 ```
 
-3. Create an environment file and edit your database setup
+3. Compile Assets
+
+```
+gulp
+```
+
+4. Create an environment file and edit your database setup
 
 ```
 cp .env.example .env
@@ -36,20 +46,20 @@ DB_USERNAME=username
 DB_PASSWORD=password
 ```
 
-4. Generate Application Key
+5. Generate Application Key
 
 ```
 php artisan key:generate
 ```
 
-5. Run the database migrations
+6. Run the database migrations
 
 ```
 php artisan migrate
 ```
 
-6. Set up the scheduler to run cron jobs
+7. Set up the scheduler to run cron jobs
 
-7. Edit your `/etc/hosts` file and re-provision your local server
+8. Edit your `/etc/hosts` file and re-provision your local server
 
-8. Visit the domain you provided in the above step in your browser and access the '/news' route.
+9. Visit the domain you provided in the above step in your browser and access the '/news' route.
