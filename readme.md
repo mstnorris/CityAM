@@ -8,6 +8,8 @@
 4. [Instructions](instructions.md)
 5. [Report](report.md)
 
+![Screenshot](/public/images/screenshot.png)
+
 ## Overview
 
 This technical test is intended to test your ability to structure code, process data, and present it.
