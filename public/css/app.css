@@ -4763,6 +4763,11 @@ img {
   width: 116%;
   margin-left: -8%; }
 
+img.img-screenshot {
+  width: 100%;
+  border: none;
+  margin: 0; }
+
 article {
   margin-bottom: 60px; }
 

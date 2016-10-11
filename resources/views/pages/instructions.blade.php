@@ -16,25 +16,29 @@
 
                 <h2>Routes</h2>
 
-                <p><code>/news</code></p>
+                <h4>/news</h4>
 
                 <p class="lead">View the paginated news articles. This is set to 5 by default. See 'app/Http/Controllers/ArticleController.php'.</p>
 
-                <p><code>/</code></p>
+                <h4>/</h4>
 
                 <p class="lead">Displays the welcome page.</p>
 
-                <p><code>/readme</code></p>
+                <h4>/readme</h4>
 
                 <p class="lead">Displays the formatted repository Readme.</p>
 
-                <p><code>/installation</code></p>
+                <h4>/installation</h4>
 
                 <p class="lead">Displays the installation instructions. I guess if you're reading this in the browser then you've got it working already!</p>
 
-                <p><code>/instructions</code></p>
+                <h4>/instructions</h4>
 
                 <p class="lead">It's this file.</p>
+
+                <h4>/report</h4>
+
+                <p class="lead">Displays a little report about my work.</p>
 
                 <h2>Tests</h2>
 

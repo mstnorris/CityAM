@@ -45,6 +45,10 @@ Displays the installation instructions. I guess if you're reading this in the br
 
 It's this file.
 
+**/report**
+
+Displays a little report about my work.
+
 ### Tests
 
 Run `phpunit` to run the tests

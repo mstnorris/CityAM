@@ -6,6 +6,8 @@
             <div class="col-xs-12">
                 <h1 class="display-4">Readme</h1>
 
+                <img src="/images/screenshot.png" alt="Screenshot" class="img-fluid img-screenshot">
+
                 <h2>Overview</h2>
 
                 <p class="lead">
