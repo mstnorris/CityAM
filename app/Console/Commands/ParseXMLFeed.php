@@ -41,12 +41,17 @@ class ParseXMLFeed extends Command
      */
     public function handle()
     {
+        // get the supplied feed URL or use the default
         $feedURL = $this->argument('feed');
 
+        // use the Feeds (https://github.com/willvincent/feeds) package to parse the RSS
         $feed = Feeds::make($feedURL);
 
+        // A little output for when running the command manually
         $this->line('Processing URL: ' . $feedURL);
 
+        // create a collection of the returned items, and for each item,
+        // if it doesn't already exist in the database, create one.
         collect($feed->get_items())->map(function ($item, $key) {
             return [
                 'link' => $item->get_permalink(),
@@ -61,7 +66,6 @@ class ParseXMLFeed extends Command
                 Article::create($item);
             }
         });
-
 
     }
 }
