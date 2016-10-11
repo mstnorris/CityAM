@@ -13,12 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
-
-Route::get('articles', function () {
-    $articles = App\Article::latest('published_at')->paginate(5);
-
-    return response()->json(['articles' => $articles]);
-});
+// The route below isn't being used. I played around with the idea of loading each article as a Vue Component
+// but due to time constraints I thought I should keep things simple and stick to good old simple pagination
+// Route::get('articles', function () {
+//     $articles = App\Article::latest('published_at')->paginate(5);
+//
+//     return response()->json(['articles' => $articles]);
+// });
