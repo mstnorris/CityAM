@@ -47,3 +47,81 @@ collect($feed->get_items())->map(function ($item, $key) {
     }
 });
 ```
+
+### app/Console/Kernel.php
+
+Registering the Artisan Command to run every minute
+
+```php
+protected function schedule(Schedule $schedule)
+{
+    $schedule->command('rss:parse')->everyMinute();
+}
+```
+
+### app/Article.php
+
+```php
+// set the mass assignable fields
+protected $fillable = ['title', 'link', 'description', 'published_at'];
+
+// set the published_at attribute to be an instance of Carbon
+protected $dates = ['published_at'];
+```
+
+### app/Http/Controllers/ArticleController.php
+
+```php
+public function index()
+{
+    $articles = Article::latest('published_at')->simplePaginate(5);
+
+    return view('news')->with('articles', $articles);
+}
+```
+
+### tests/ViewNewsArticlesTest.php
+
+The tests are self explanatory, I'm using Model Factories to create dummy articles. The first test generates *one* article and checks that it is visible in the browser. The second test, checks to see that pagination works. The articles are displayed, five to a page, in reverse chronological order (latest first - by the `published_at` date).
+
+```php
+public function testCanViewNewsArticles()
+{
+    $firstArticle = factory(Article::class)->create([
+        'link' => 'http://example.com/1',
+        'title' => 'City A.M. First Article',
+        'description' => 'This is the body of the first article.',
+        'published_at' => Carbon::now()
+    ]);
+
+    $this->visit('/news')
+        ->see('City A.M. First Article');
+}
+
+public function testPaginationOfNewsArticles()
+{
+    $firstArticle = factory(Article::class)->create([
+        'link' => 'http://example.com/1',
+        'title' => 'City A.M. First Article',
+        'description' => 'This is the body of the first article.',
+        'published_at' => Carbon::yesterday()->subDay()
+    ]);
+
+    $nextFourArticles = factory(Article::class, 4)->create([
+        'published_at' => Carbon::yesterday()
+    ]);
+
+    $sixthArticle = factory(Article::class)->create([
+        'link' => 'http://example.com/6',
+        'title' => 'City A.M. Sixth Article',
+        'description' => 'This is the body of the sixth article.',
+        'published_at' => Carbon::now()
+    ]);
+
+    $this->visit('/news')
+        ->see('City A.M. Sixth Article');
+    $this->visit('/news?page=2')
+        ->see('City A.M. First Article')
+        ->dontSee('City A.M. Sixth Article');
+}
+```

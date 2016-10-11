@@ -6,21 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
+    // set the mass assignable fields
     protected $fillable = ['title', 'link', 'description', 'published_at'];
 
+    // set the published_at attribute to be an instance of Carbon
     protected $dates = ['published_at'];
-
-//    public $title;
-//    public $link;
-//    public $description;
-//    public $publishedAt;
-//
-//    public function __construct($title, $link, $description, $publishedAt)
-//    {
-//        $this->title = $title;
-//        $this->link = $link;
-//        $this->description = $description;
-//        $this->publishedAt = $publishedAt;
-//    }
 
 }
